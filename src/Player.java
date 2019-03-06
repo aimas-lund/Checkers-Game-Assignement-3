@@ -31,10 +31,6 @@ public class Player {
         return pn.getNumber();
     }
 
-    public void printPlayerNumber() {
-        System.out.println("Player " + getPlayerNumber());
-    }
-
     public void setTurn(boolean turn) {
         this.turn = turn;
     }

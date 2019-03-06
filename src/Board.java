@@ -1,20 +1,4 @@
-class C {
-    private final int first;
-    private final int second;
 
-    public C(int first, int second) {
-        this.first = first;
-        this.second = second;
-    }
-
-    public int getFirst() {
-        return first;
-    }
-
-    public int getSecond() {
-        return second;
-    }
-}
 
 public class Board {
 
@@ -61,6 +45,13 @@ public class Board {
         System.out.println("   0 1 2 3 4 5 6 7");
     }
 
+    public Piece getPiece(int col, int row) {
+        return theBoard[col][row];
+    }
+
+    public void removePiece(Piece p) {
+        theBoard[p.getyCoord()][p.getxCoord()] = null;
+    }
 
     public void manipulate(Piece p) {
         // Insert stuff

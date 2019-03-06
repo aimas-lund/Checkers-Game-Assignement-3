@@ -1,6 +1,17 @@
-
+import java.util.*;
 
 public class CheckersGame {
+
+    //Takes some user input and returns it as coordinates C (tuple)
+    public C selectCoord() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nChoose x-coordinate:");
+        int col = input.nextInt();
+        System.out.println("\nChoose y-coordinate:");
+        int row = input.nextInt();
+
+        return new C(col, row);
+    }
 
     public void switchTurn(Player p1, Player p2) {
         System.out.println("\nSwitching Turn!");
@@ -28,6 +39,9 @@ public class CheckersGame {
         board.printBoard();
         player1.setTurn(true);
         game.switchTurn(player1, player2);
+        //System.out.println(game.selectCoord().getSecond());
+        board.removePiece(board.getPiece(1,0));
+        board.printBoard();
 
     }
 }
