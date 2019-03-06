@@ -4,6 +4,7 @@ public class Board {
 
     private Piece[][] theBoard;
 
+    //Defines the board and insert the Piece objects in the array.
     public void initBoard(Player p1, Player p2) {
         this.theBoard = new Piece[8][8];
         C[] P_1_INIT = {new C(1,0), new C(3,0), new C(5,0), new C(7,0),
@@ -14,16 +15,15 @@ public class Board {
             new C(0,7), new C(2,7), new C(4,7), new C(6,7)};
 
         for (int i = 0; i < 12; i++) {
-            int X = P_1_INIT[i].getFirst();
-            int Y = P_1_INIT[i].getSecond();
-            theBoard[Y][X] = new Piece(X, Y, p1);
+            int COL = P_1_INIT[i].getFirst();
+            int ROW = P_1_INIT[i].getSecond();
+            theBoard[ROW][COL] = new Piece(COL, ROW, p1);
         }
         for (int i = 0; i < 12; i++) {
-            int X = P_2_INIT[i].getFirst();
-            int Y = P_2_INIT[i].getSecond();
-            theBoard[Y][X] = new Piece(X, Y, p2);
+            int COL = P_2_INIT[i].getFirst();
+            int ROW = P_2_INIT[i].getSecond();
+            theBoard[ROW][COL] = new Piece(COL, ROW, p2);
         }
-
     }
 
     public void printBoard() {
@@ -45,8 +45,8 @@ public class Board {
         System.out.println("   0 1 2 3 4 5 6 7");
     }
 
-    public Piece getPiece(int col, int row) {
-        return theBoard[col][row];
+    public Piece getPiece(int row, int col) {
+        return theBoard[row][col];
     }
 
     public void removePiece(Piece p) {

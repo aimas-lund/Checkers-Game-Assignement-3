@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 enum Players {
     P_1(1), P_2(2);
 
@@ -37,5 +39,15 @@ public class Player {
 
     public boolean isTurn() {
         return this.turn;
+    }
+
+    public C selectCoord() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nChoose x-coordinate:");
+        int col = input.nextInt();
+        System.out.println("\nChoose y-coordinate:");
+        int row = input.nextInt();
+
+        return new C(col, row);
     }
 }

@@ -1,3 +1,5 @@
+
+//Custom made tuple class for handling coordinates
 public class C {
     private final int first;
     private final int second;
