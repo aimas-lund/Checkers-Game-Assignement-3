@@ -14,14 +14,17 @@ enum Players {
     public void setNumber(int number) {
         this.number = number;
     }
+
 }
 
 public class Player {
 
     private Players pn;
+    private boolean turn;
 
     public Player(Players pn) {
         this.pn = pn;
+        this.turn = false;
     }
 
     public int getPlayerNumber() {
@@ -30,5 +33,13 @@ public class Player {
 
     public void printPlayerNumber() {
         System.out.println("Player " + getPlayerNumber());
+    }
+
+    public void setTurn(boolean turn) {
+        this.turn = turn;
+    }
+
+    public boolean isTurn() {
+        return this.turn;
     }
 }
