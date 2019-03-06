@@ -1,23 +1,10 @@
-class Player {
-}
-
-class Piece {
-
-
-    public Piece(Player p) {
-
-    }
-}
-
 public class CheckersGame {
-    static int[][] Board = {
-            {0, 1, 0, 1, 0, 1, 0, 1},
-            {1, 0, 1, 0, 1, 0, 1, 0},
-            {0, 1, 0, 1, 0, 1, 0, 1},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {2, 0, 2, 0, 2, 0, 2, 0},
-            {0, 2, 0, 2, 0, 2, 0, 2},
-            {2, 0, 2, 0, 2, 0, 2, 0},
-    };
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Object-oriented Checkers!");
+        System.out.println("Initializing game...\n");
+        Board board = new Board();
+        board.initBoard();
+        board.printBoard();
+    }
 }
