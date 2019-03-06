@@ -47,5 +47,11 @@ public class Piece {
         return (LegalMoves.containsAll(moves));
     }
 
-    
+//    public static void main(String[] args) {
+//        Player pl = new Player(Players.P_1);
+//        Piece pi = new Piece(0,1, pl);
+//        C sel = pl.selectCoord();
+//        System.out.println(pi.isWithinBounds(sel.getFirst(), sel.getSecond()));
+//    }
+
 }
