@@ -18,7 +18,7 @@ public class CheckersGame {
         CheckersGame game = new CheckersGame();
         System.out.println("Welcome to Object-oriented Checkers!");
 
-        System.out.println("Initializing game...\n");
+        System.out.println("Initializing game...");
         Player player1 = new Player(Players.P_1);
         Player player2 = new Player(Players.P_2);
         Board board = new Board();

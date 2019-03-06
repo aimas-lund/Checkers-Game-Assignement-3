@@ -27,7 +27,7 @@ public class Board {
     }
 
     public void printBoard() {
-        System.out.println("   0 1 2 3 4 5 6 7");
+        System.out.println("\n   0 1 2 3 4 5 6 7");
         System.out.println(" + --------------- +");
         for (int i = 0; i <= 7; i++) {
             System.out.print(i + "| ");
@@ -35,7 +35,7 @@ public class Board {
                 if (theBoard[i][j] == null) {
                     System.out.print("  ");
                 } else {
-                    System.out.print(theBoard[i][j].getOwner() + " ");
+                    System.out.print(theBoard[i][j].getOwner().getPlayerNumber() + " ");
                 }
             }
             System.out.print("|" + i);
@@ -53,7 +53,26 @@ public class Board {
         theBoard[p.getyCoord()][p.getxCoord()] = null;
     }
 
+    // Checks if a spot if free of any other piece.
+    public boolean isNewPosAvailable(C newPos, Piece p) {
+        int newCol = newPos.getFirst();
+        int newRow = newPos.getSecond();
+        int curCol = p.getxCoord();
+        int curRow = p.getyCoord();
+        if (theBoard[newRow][newCol] == null) {
+            return true;
+        } else if (curCol == newCol && curRow == newCol) {
+            System.err.println("Your piece already occupies this position.");
+            return false;
+        } else {
+            System.err.println("This position is occupied by another piece.");
+            return false;
+        }
+        // Make some checking for other Pieces in that position
+        return true;
+    }
+
     public void manipulate(Piece p) {
-        // Insert stuff
+        // Actually move the piece depending of the properties if Piece
     }
 }
