@@ -17,12 +17,10 @@ public class Board {
         for (int i = 0; i < 12; i++) {
             int COL = P_1_INIT[i].getFirst();
             int ROW = P_1_INIT[i].getSecond();
+            int COL2 = P_2_INIT[i].getFirst();
+            int ROW2 = P_2_INIT[i].getSecond();
             theBoard[ROW][COL] = new Piece(COL, ROW, p1);
-        }
-        for (int i = 0; i < 12; i++) {
-            int COL = P_2_INIT[i].getFirst();
-            int ROW = P_2_INIT[i].getSecond();
-            theBoard[ROW][COL] = new Piece(COL, ROW, p2);
+            theBoard[ROW2][COL2] = new Piece(COL, ROW, p2);
         }
     }
 
@@ -69,7 +67,6 @@ public class Board {
             return false;
         }
         // Make some checking for other Pieces in that position
-        return true;
     }
 
     public void manipulate(Piece p) {

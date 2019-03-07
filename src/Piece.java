@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Piece {
 
-    static final Integer[] LegalMovesArray = {0, 1, 2, 3, 4, 5, 6, 7};
-    static final List<Integer> LegalMoves = Arrays.asList(LegalMovesArray);
+    private static final Integer[] LegalMovesArray = {0, 1, 2, 3, 4, 5, 6, 7};
+    private static final List<Integer> LegalMoves = Arrays.asList(LegalMovesArray);
 
     private int col;
     private int row;
