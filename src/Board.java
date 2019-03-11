@@ -2,6 +2,12 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+class NotAPieceException extends Exception {
+    public NotAPieceException(String msg) {
+        super(msg);
+    }
+}
+
 public class Board {
 
     private final Integer[] LegalMovesArray = {0, 1, 2, 3, 4, 5, 6, 7};
@@ -55,12 +61,27 @@ public class Board {
         System.out.println("   0 1 2 3 4 5 6 7");
     }
 
-    public Piece getPiece(int row, int col) {
-        return theBoard[row][col];
+    public Piece getContent(C pos) {
+        return theBoard[pos.getSecond()][pos.getFirst()];
+    }
+
+    public Piece getPiece(C pos) throws NotAPieceException {
+        if (theBoard[pos.getSecond()][pos.getFirst()] == null) {
+            throw new NotAPieceException("Selected position does not contain a piece");
+        }
+        return theBoard[pos.getSecond()][pos.getFirst()];
     }
 
     public void removePiece(Piece p) {
         theBoard[p.getyCoord()][p.getxCoord()] = null;
+    }
+
+    public void removePiece(int row, int col) {
+        theBoard[row][col] = null;
+    }
+
+    public void setNewPiece(Piece p) {
+        theBoard[p.getyCoord()][p.getxCoord()] = p;
     }
 
     // Checks if a spot if free of any other piece.
@@ -88,9 +109,5 @@ public class Board {
             throw new IllegalMoveException("This position is out of bounds");
         }
         return (true);
-    }
-
-    public void manipulate() {
-
     }
 }

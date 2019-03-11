@@ -15,6 +15,75 @@ public class CheckersGame {
         }
     }
 
+    public void makeAPlay(Board board, Player player) throws IllegalMoveException, NotAPieceException {
+        C firstChoice = null;
+        C secondChoice = null;
+        Piece piece;
+        int displacementCol;
+        int displacementRow;
+        boolean nonlegitimatePlay = true;
+        boolean isIncorrectPieceCheck = true;
+        boolean isOccupied = false;
+
+        // First, choose a piece belonging to you.
+        // Having chosen a legitimate piece, you cannot unpick it.
+        while (isIncorrectPieceCheck) {
+            System.out.println("Choose your piece, Player " + player.getPlayerNumber() + ".");
+            try { // Chosen to catch exception here, given player is free to choose any integer.
+                firstChoice = player.selectCoord();
+            } catch (BoardOutOfBoundsException e) {
+                System.err.println(e);
+                continue;
+            }
+            Piece content = board.getContent(firstChoice);
+            isIncorrectPieceCheck = (content == null) || (player != content.getOwner());
+            if (isIncorrectPieceCheck) {
+                System.err.println("This coordinate does not contain a piece belonging to you.");
+            }
+        }
+
+        piece = board.getPiece(firstChoice);
+
+        // Second, choose a destination for the piece.
+        while (nonlegitimatePlay) {
+            System.out.println("Choose the destination of your piece, Player " + player.getPlayerNumber() + ".");
+            try { // Chosen to catch exception here, given player is free to choose any integer.
+                secondChoice = player.selectCoord();
+            } catch (BoardOutOfBoundsException e) {
+                System.err.println(e);
+                continue;
+            }
+            if (board.getContent(secondChoice) != null) {
+                System.err.println("Space already occupied");
+                continue;
+            }
+            displacementCol = secondChoice.getFirst() - firstChoice.getFirst();
+            displacementRow = secondChoice.getSecond() - firstChoice.getSecond();
+
+            if (player.getPlayerNumber() == 1) {
+                if (Math.abs(displacementCol) == 1 && displacementRow == 1) {
+                    if (player.regularMove(secondChoice, piece, board)) {
+                        board.removePiece(piece);
+                        piece.setxCoord(secondChoice.getFirst());
+                        piece.setyCoord(secondChoice.getSecond());
+                        board.setNewPiece(piece);
+                    }
+                } else if (Math.abs(displacementCol) == 2 && displacementRow == 2) {
+                    if (player.attackingMove(secondChoice, piece, board)) {
+                        board.removePiece(piece);
+                        board.removePiece();
+                        piece.setxCoord(secondChoice.getFirst());
+                        piece.setyCoord(secondChoice.getSecond());
+                        board.setNewPiece(piece);
+                    }
+                }
+
+            } else {
+
+            }
+        }
+    }
+
     public static void main(String[] args) {
         CheckersGame game = new CheckersGame();
         System.out.println("Welcome to Object-oriented Checkers!");
@@ -29,7 +98,7 @@ public class CheckersGame {
         board.printBoard();
         player1.setTurn(true);
         game.switchTurn(player1, player2);
-        board.removePiece(board.getPiece(1,0));
+        board.removePiece(board.getContent(new C(1,0)));
         board.printBoard();
     }
 }
