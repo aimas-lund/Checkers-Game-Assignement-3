@@ -71,7 +71,9 @@ public class CheckersGame {
                 } else if (Math.abs(displacementCol) == 2 && displacementRow == 2) {
                     if (player.attackingMove(secondChoice, piece, board)) {
                         board.removePiece(piece);
-                        board.removePiece();
+                        C enemyPiecePos = new C(piece.getxCoord()+(displacementCol/2) ,
+                                piece.getyCoord() + (displacementRow/2));
+                        board.removePiece(enemyPiecePos);
                         piece.setxCoord(secondChoice.getFirst());
                         piece.setyCoord(secondChoice.getSecond());
                         board.setNewPiece(piece);
@@ -79,7 +81,24 @@ public class CheckersGame {
                 }
 
             } else {
-
+                if (Math.abs(displacementCol) == 1 && displacementRow == -1) {
+                    if (player.regularMove(secondChoice, piece, board)) {
+                        board.removePiece(piece);
+                        piece.setxCoord(secondChoice.getFirst());
+                        piece.setyCoord(secondChoice.getSecond());
+                        board.setNewPiece(piece);
+                    }
+                } else if (Math.abs(displacementCol) == 2 && displacementRow == -2) {
+                    if (player.attackingMove(secondChoice, piece, board)) {
+                        board.removePiece(piece);
+                        C enemyPiecePos = new C(piece.getxCoord()+(displacementCol/2) ,
+                                piece.getyCoord() + (displacementRow/2));
+                        board.removePiece(enemyPiecePos);
+                        piece.setxCoord(secondChoice.getFirst());
+                        piece.setyCoord(secondChoice.getSecond());
+                        board.setNewPiece(piece);
+                    }
+                }
             }
         }
     }

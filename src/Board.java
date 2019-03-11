@@ -76,8 +76,8 @@ public class Board {
         theBoard[p.getyCoord()][p.getxCoord()] = null;
     }
 
-    public void removePiece(int row, int col) {
-        theBoard[row][col] = null;
+    public void removePiece(C pos) {
+        theBoard[pos.getSecond()][pos.getFirst()] = null;
     }
 
     public void setNewPiece(Piece p) {
