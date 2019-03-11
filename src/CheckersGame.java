@@ -1,3 +1,4 @@
+
 public class CheckersGame {
 
     //Takes some user input and returns it as coordinates C (tuple)
@@ -22,8 +23,9 @@ public class CheckersGame {
         Player player1 = new Player(Players.P_1);
         Player player2 = new Player(Players.P_2);
         Board board = new Board();
-
         board.initBoard(player1, player2);
+
+        System.out.println("Ready to play! 3... 2... 1... GO!");
         board.printBoard();
         player1.setTurn(true);
         game.switchTurn(player1, player2);

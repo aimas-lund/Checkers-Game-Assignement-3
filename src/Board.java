@@ -1,8 +1,20 @@
-
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 public class Board {
 
+    private final Integer[] LegalMovesArray = {0, 1, 2, 3, 4, 5, 6, 7};
+    private final List<Integer> LegalMoves = Arrays.asList(LegalMovesArray);
     private Piece[][] theBoard;
+
+    public List<Integer> getLegalMoves() {
+        return LegalMoves;
+    }
+
+    public Piece[][] getBoard() {
+        return theBoard;
+    }
 
     //Defines the board and insert the Piece objects in the array.
     public void initBoard(Player p1, Player p2) {
@@ -52,24 +64,33 @@ public class Board {
     }
 
     // Checks if a spot if free of any other piece.
-    public boolean isNewPosAvailable(C newPos, Piece p) {
+    public boolean isNewPosAvailable(C newPos, Piece p, Board board) throws IllegalMoveException {
         int newCol = newPos.getFirst();
         int newRow = newPos.getSecond();
         int curCol = p.getxCoord();
         int curRow = p.getyCoord();
-        if (theBoard[newRow][newCol] == null) {
+        if (board.getBoard()[newRow][newCol] == null) {
             return true;
         } else if (curCol == newCol && curRow == newCol) {
-            System.err.println("Your piece already occupies this position.");
-            return false;
+            throw new IllegalMoveException("Your piece already occupies this spot.");
         } else {
-            System.err.println("This position is occupied by another piece.");
-            return false;
+            throw new IllegalMoveException("This position is occupied by another piece.");
         }
-        // Make some checking for other Pieces in that position
     }
 
-    public void manipulate(Piece p) {
-        // Actually move the piece depending of the properties if Piece
+    // Checks if some chosen coordinate is within the board
+    public boolean isWithinBounds(C pos, Board board) throws IllegalMoveException {
+        Integer R = pos.getSecond();
+        Integer C = pos.getFirst();
+        Integer[] input = {R, C};
+        Collection moves = Arrays.asList(input);
+        if (!board.getLegalMoves().containsAll(moves)) {
+            throw new IllegalMoveException("This position is out of bounds");
+        }
+        return (true);
+    }
+
+    public void manipulate() {
+
     }
 }
