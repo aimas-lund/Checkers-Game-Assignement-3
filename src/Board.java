@@ -38,7 +38,7 @@ public class Board {
             int COL2 = P_2_INIT[i].getFirst();
             int ROW2 = P_2_INIT[i].getSecond();
             theBoard[ROW][COL] = new Piece(COL, ROW, p1);
-            theBoard[ROW2][COL2] = new Piece(COL, ROW, p2);
+            theBoard[ROW2][COL2] = new Piece(COL2, ROW2, p2);
         }
     }
 

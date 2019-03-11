@@ -61,34 +61,34 @@ public class Player {
     }
 
     public boolean regularMove(C newPos, Piece piece, Board board) throws IllegalMoveException {
-        int displacementRow = newPos.getSecond() - piece.getyCoord();
+        int displacementRow =  piece.getyCoord() - newPos.getSecond();
         boolean verifyX = Math.abs(newPos.getFirst() - piece.getxCoord()) == 1;
-
+        System.out.println(displacementRow);
         if (getPlayerNumber() == 1) {
             // Normal move requirements for Player 1
-            if ((verifyX) && (displacementRow == 1)) {
+            if ((verifyX) && (displacementRow == -1)) {
                 return board.isWithinBounds(newPos, board) && board.isNewPosAvailable(newPos, piece, board);
             } else throw new IllegalMoveException("Given move is not a legal 'regular' move");
         } else {
             // Normal move requirements for Player 2
-            if ((verifyX) && (displacementRow == -1)) {
+            if ((verifyX) && (displacementRow == 1)) {
                 return board.isWithinBounds(newPos, board) && board.isNewPosAvailable(newPos, piece, board);
             } else throw new IllegalMoveException("Given move is not a legal 'regular' move");
         }
     }
 
     public boolean attackingMove(C newPos, Piece piece, Board board) throws IllegalMoveException {
-        int displacementRow = newPos.getSecond() - piece.getyCoord();
+        int displacementRow = piece.getyCoord() - newPos.getSecond();
         boolean verifyX = Math.abs(newPos.getFirst() - piece.getxCoord()) == 2;
 
         if (getPlayerNumber() == 1) {
             // Normal move requirements for Player 1
-            if ((verifyX) && (displacementRow == 2)) {
+            if ((verifyX) && (displacementRow == -2)) {
                 return board.isWithinBounds(newPos, board) && board.isNewPosAvailable(newPos, piece, board);
             } else throw new IllegalMoveException("Given move is not a legal 'attacking' move");
         } else {
             // Normal move requirements for Player 2
-            if ((verifyX) && (displacementRow == -2)) {
+            if ((verifyX) && (displacementRow == 2)) {
                 return board.isWithinBounds(newPos, board) && board.isNewPosAvailable(newPos, piece, board);
             } else throw new IllegalMoveException("Given move is not a legal 'attacking' move");
         }
