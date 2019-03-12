@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CheckersGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="67" column="67" lean-forward="true" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
+            <state relative-caret-position="323">
+              <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+            <state relative-caret-position="1853">
+              <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#165#166#0" expanded="true" />
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="102">
+              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding>
                 <element signature="e#258#259#0" expanded="true" />
                 <element signature="e#286#287#0" expanded="true" />
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+            <state relative-caret-position="153">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
                 <element signature="e#128#129#0" expanded="true" />
                 <element signature="e#148#149#0" expanded="true" />
@@ -89,10 +89,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#456#457#0" expanded="true" />
                 <element signature="e#482#483#0" expanded="true" />
                 <element signature="e#520#521#0" expanded="true" />
@@ -104,6 +103,114 @@
                 <element signature="e#706#707#0" expanded="true" />
                 <element signature="e#734#735#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/Piece">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>Piece</OriginalElement>
+              <nodes>
+                <node x="95.77556818181819" y="133.0">Player</node>
+                <node x="0.0" y="491.0">Board</node>
+                <node x="182.2755681818182" y="0.0">C</node>
+                <node x="190.31655844155844" y="346.0">Piece</node>
+                <node x="198.8973214285714" y="846.0">CheckersGame</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="CheckersGame" target="C">
+                  <point x="99.42857142857149" y="-47.5" />
+                  <point x="414.3258928571429" y="826.0" />
+                  <point x="403.2755681818182" y="826.0" />
+                  <point x="403.2755681818182" y="93.0" />
+                  <point x="281.2755681818182" y="93.0" />
+                  <point x="45.0" y="36.5" />
+                </edge>
+                <edge source="Board" target="C">
+                  <point x="-128.99999999999997" y="-147.5" />
+                  <point x="21.50000000000003" y="461.0" />
+                  <point x="74.27556818181819" y="461.0" />
+                  <point x="74.27556818181819" y="93.0" />
+                  <point x="191.2755681818182" y="93.0" />
+                  <point x="-45.0" y="36.5" />
+                </edge>
+                <edge source="CheckersGame" target="Piece">
+                  <point x="-33.14285714285711" y="-47.5" />
+                  <point x="281.7544642857143" y="806.0" />
+                  <point x="333.2715097402598" y="806.0" />
+                  <point x="333.2715097402598" y="471.0" />
+                  <point x="296.1915584415584" y="471.0" />
+                  <point x="45.375" y="47.5" />
+                </edge>
+                <edge source="CheckersGame" target="Player">
+                  <point x="33.142857142857196" y="-47.5" />
+                  <point x="348.0401785714286" y="826.0" />
+                  <point x="362.5840097402598" y="826.0" />
+                  <point x="362.5840097402598" y="321.0" />
+                  <point x="356.70413961038963" y="321.0" />
+                  <point x="120.42857142857144" y="81.5" />
+                </edge>
+                <edge source="Player" target="Board">
+                  <point x="-120.42857142857144" y="81.5" />
+                  <point x="115.84699675324674" y="321.0" />
+                  <point x="139.50000000000003" y="321.0" />
+                  <point x="139.50000000000003" y="471.0" />
+                  <point x="107.50000000000003" y="471.0" />
+                  <point x="-42.99999999999997" y="-147.5" />
+                </edge>
+                <edge source="Board" target="Player">
+                  <point x="2.8421709430404007E-14" y="-147.5" />
+                  <point x="150.50000000000003" y="321.0" />
+                  <point x="155.98985389610388" y="321.0" />
+                  <point x="-80.2857142857143" y="81.5" />
+                </edge>
+                <edge source="Player" target="Piece">
+                  <point x="40.14285714285711" y="81.5" />
+                  <point x="276.4184253246753" y="321.0" />
+                  <point x="291.1498917748918" y="321.0" />
+                  <point x="40.333333333333314" y="-47.5" />
+                </edge>
+                <edge source="Board" target="Piece">
+                  <point x="129.00000000000003" y="-147.5" />
+                  <point x="279.5" y="471.0" />
+                  <point x="265.9415584415584" y="471.0" />
+                  <point x="15.125" y="47.5" />
+                </edge>
+                <edge source="Piece" target="Player">
+                  <point x="0.0" y="-47.5" />
+                  <point x="250.81655844155844" y="321.0" />
+                  <point x="236.2755681818182" y="321.0" />
+                  <point x="0.0" y="81.5" />
+                </edge>
+                <edge source="CheckersGame" target="Board">
+                  <point x="-99.42857142857139" y="-47.5" />
+                  <point x="215.46875" y="826.0" />
+                  <point x="75.25" y="826.0" />
+                  <point x="-75.25" y="147.5" />
+                </edge>
+                <edge source="Player" target="C">
+                  <point x="-70.25" y="-81.5" />
+                  <point x="166.0255681818182" y="113.0" />
+                  <point x="227.2755681818182" y="113.0" />
+                  <point x="-9.0" y="36.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="365.0" y="578.0" />
+              <SelectedNodes>
+                <node>Piece</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+                <Category>Inner Classes</Category>
+                <Category>Properties</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -140,8 +247,8 @@
         <option value="$PROJECT_DIR$/src/C.java" />
         <option value="$PROJECT_DIR$/src/IllegalMoveException.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/Piece.java" />
         <option value="$PROJECT_DIR$/src/Board.java" />
+        <option value="$PROJECT_DIR$/src/Piece.java" />
         <option value="$PROJECT_DIR$/src/CheckersGame.java" />
       </list>
     </option>
@@ -186,12 +293,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552348021289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552350347382" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Exercises/lecture_4/SolidExercises/src/ocp/solution/Circle.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,18 +361,18 @@
       <option name="presentableId" value="Default" />
       <updated>1551279584506</updated>
       <workItem from="1551950279727" duration="1140000" />
-      <workItem from="1552329822845" duration="18029000" />
+      <workItem from="1552329822845" duration="20191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19169000" />
+    <option name="totallyTimeSpent" value="21331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1709531" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0816944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -291,7 +398,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.30484116" />
+      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.2526475" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Debug" order="10" weight="0.39863843" />
     </layout>
@@ -356,10 +463,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CheckersGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="102">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding>
             <element signature="e#258#259#0" expanded="true" />
             <element signature="e#286#287#0" expanded="true" />
@@ -371,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
             <element signature="e#128#129#0" expanded="true" />
             <element signature="e#148#149#0" expanded="true" />
@@ -392,30 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        <state relative-caret-position="1853">
+          <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#165#166#0" expanded="true" />
@@ -436,10 +549,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CheckersGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="67" column="67" lean-forward="true" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
+    <entry file="uml://JAVA/Piece">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Piece</OriginalElement>
+          <nodes>
+            <node x="95.77556818181819" y="133.0">Player</node>
+            <node x="0.0" y="491.0">Board</node>
+            <node x="182.2755681818182" y="0.0">C</node>
+            <node x="190.31655844155844" y="346.0">Piece</node>
+            <node x="198.8973214285714" y="846.0">CheckersGame</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="CheckersGame" target="C">
+              <point x="99.42857142857149" y="-47.5" />
+              <point x="414.3258928571429" y="826.0" />
+              <point x="403.2755681818182" y="826.0" />
+              <point x="403.2755681818182" y="93.0" />
+              <point x="281.2755681818182" y="93.0" />
+              <point x="45.0" y="36.5" />
+            </edge>
+            <edge source="Board" target="C">
+              <point x="-128.99999999999997" y="-147.5" />
+              <point x="21.50000000000003" y="461.0" />
+              <point x="74.27556818181819" y="461.0" />
+              <point x="74.27556818181819" y="93.0" />
+              <point x="191.2755681818182" y="93.0" />
+              <point x="-45.0" y="36.5" />
+            </edge>
+            <edge source="CheckersGame" target="Piece">
+              <point x="-33.14285714285711" y="-47.5" />
+              <point x="281.7544642857143" y="806.0" />
+              <point x="333.2715097402598" y="806.0" />
+              <point x="333.2715097402598" y="471.0" />
+              <point x="296.1915584415584" y="471.0" />
+              <point x="45.375" y="47.5" />
+            </edge>
+            <edge source="CheckersGame" target="Player">
+              <point x="33.142857142857196" y="-47.5" />
+              <point x="348.0401785714286" y="826.0" />
+              <point x="362.5840097402598" y="826.0" />
+              <point x="362.5840097402598" y="321.0" />
+              <point x="356.70413961038963" y="321.0" />
+              <point x="120.42857142857144" y="81.5" />
+            </edge>
+            <edge source="Player" target="Board">
+              <point x="-120.42857142857144" y="81.5" />
+              <point x="115.84699675324674" y="321.0" />
+              <point x="139.50000000000003" y="321.0" />
+              <point x="139.50000000000003" y="471.0" />
+              <point x="107.50000000000003" y="471.0" />
+              <point x="-42.99999999999997" y="-147.5" />
+            </edge>
+            <edge source="Board" target="Player">
+              <point x="2.8421709430404007E-14" y="-147.5" />
+              <point x="150.50000000000003" y="321.0" />
+              <point x="155.98985389610388" y="321.0" />
+              <point x="-80.2857142857143" y="81.5" />
+            </edge>
+            <edge source="Player" target="Piece">
+              <point x="40.14285714285711" y="81.5" />
+              <point x="276.4184253246753" y="321.0" />
+              <point x="291.1498917748918" y="321.0" />
+              <point x="40.333333333333314" y="-47.5" />
+            </edge>
+            <edge source="Board" target="Piece">
+              <point x="129.00000000000003" y="-147.5" />
+              <point x="279.5" y="471.0" />
+              <point x="265.9415584415584" y="471.0" />
+              <point x="15.125" y="47.5" />
+            </edge>
+            <edge source="Piece" target="Player">
+              <point x="0.0" y="-47.5" />
+              <point x="250.81655844155844" y="321.0" />
+              <point x="236.2755681818182" y="321.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="CheckersGame" target="Board">
+              <point x="-99.42857142857139" y="-47.5" />
+              <point x="215.46875" y="826.0" />
+              <point x="75.25" y="826.0" />
+              <point x="-75.25" y="147.5" />
+            </edge>
+            <edge source="Player" target="C">
+              <point x="-70.25" y="-81.5" />
+              <point x="166.0255681818182" y="113.0" />
+              <point x="227.2755681818182" y="113.0" />
+              <point x="-9.0" y="36.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="365.0" y="578.0" />
+          <SelectedNodes>
+            <node>Piece</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

@@ -16,6 +16,8 @@ public class CheckersGame {
         }
     }
 
+    // Takes all the methods from the classes and makes a checkers game out of them.
+    // Downsides: You cannot unselect a piece, once it has been selected, and is valid.
     public void makeAPlay(Board board, Player player) throws IllegalMoveException, NotAPieceException {
         C firstChoice = null;
         C secondChoice = null;
@@ -68,6 +70,7 @@ public class CheckersGame {
                 displacementCol = firstChoice.getFirst() - secondChoice.getFirst();
                 displacementRow = firstChoice.getSecond() - secondChoice.getSecond();
 
+                // This bit could be optimized...
                 if (player.getPlayerNumber() == 1) {
                     if (Math.abs(displacementCol) == 1 && displacementRow == -1) {
                         if (player.regularMove(secondChoice, piece, board)) {

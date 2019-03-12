@@ -84,7 +84,7 @@ public class Board {
         theBoard[p.getyCoord()][p.getxCoord()] = p;
     }
 
-    // Checks if a spot if free of any other piece.
+    // Raises an exception, if you are moving any place already occupied, or occupied by yourself.
     public boolean isNewPosAvailable(C newPos, Piece p, Board board) throws IllegalMoveException {
         int newCol = newPos.getFirst();
         int newRow = newPos.getSecond();
@@ -99,7 +99,7 @@ public class Board {
         }
     }
 
-    // Checks if some chosen coordinate is within the board
+    // Raises an exception, if a given move is out of bounds.
     public boolean isWithinBounds(C pos, Board board) throws IllegalMoveException {
         Integer R = pos.getSecond();
         Integer C = pos.getFirst();
