@@ -70,7 +70,7 @@ public class CheckersGame {
                 displacementCol = firstChoice.getFirst() - secondChoice.getFirst();
                 displacementRow = firstChoice.getSecond() - secondChoice.getSecond();
 
-                // This bit could be optimized...
+                // ISSUE: Pieces are able to jump even when there is no enemy.
                 if (player.getPlayerNumber() == 1) {
                     if (Math.abs(displacementCol) == 1 && displacementRow == -1) {
                         if (player.regularMove(secondChoice, piece, board)) {
