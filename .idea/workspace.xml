@@ -118,7 +118,7 @@
                 <node x="0.0" y="491.0">Board</node>
                 <node x="182.2755681818182" y="0.0">C</node>
                 <node x="190.31655844155847" y="346.0">Piece</node>
-                <node x="474.89732142857144" y="645.0">CheckersGame</node>
+                <node x="198.89732142857144" y="846.0">CheckersGame</node>
               </nodes>
               <notes />
               <edges>
@@ -250,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -290,7 +290,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552351596481" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552352082321" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Exercises/lecture_4/SolidExercises/src/ocp/solution/Circle.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -366,7 +366,7 @@
     <option name="totallyTimeSpent" value="22656000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0816944" />
@@ -556,7 +556,7 @@
             <node x="0.0" y="491.0">Board</node>
             <node x="182.2755681818182" y="0.0">C</node>
             <node x="190.31655844155847" y="346.0">Piece</node>
-            <node x="474.89732142857144" y="645.0">CheckersGame</node>
+            <node x="198.89732142857144" y="846.0">CheckersGame</node>
           </nodes>
           <notes />
           <edges>
